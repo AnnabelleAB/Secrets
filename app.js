@@ -39,7 +39,7 @@ app.use(session({ //this session receives object
 app.use(passport.initialize());
 app.use(passport.session());
 //connect mongodb
-mongoose.connect("mongodb://localhost:27017/userDB");
+mongoose.connect("mongodb+srv://annabelleshq:zzzxshq971001@cluster0.jyonr.mongodb.net/userDB");
 // mongoose.set("useCreateIndex", true);
 
 //mongoose Schema
