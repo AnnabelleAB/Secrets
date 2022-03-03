@@ -39,7 +39,7 @@ app.use(session({ //this session receives object
 app.use(passport.initialize());
 app.use(passport.session());
 //connect mongodb
-mongoose.connect("mongodb+srv://" + process.env.ATLAS_USER + ":" + process.env.PWD + "@cluster0.jyonr.mongodb.net/userDB");
+mongoose.connect("mongodb+srv://" + process.env.ATLAS_USER + ":" + process.env.ATLAS_PWD + "@cluster0.jyonr.mongodb.net/userDB");
 // mongoose.set("useCreateIndex", true);
 
 //mongoose Schema
