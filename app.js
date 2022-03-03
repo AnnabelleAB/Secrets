@@ -10,7 +10,7 @@ const ejs = require("ejs");
 // Object Data Modeling (ODM) library for MongoDB
 const mongoose = require("mongoose");
 //set the needed cookie for specified session
-const session = require('express-session');
+const session = require('cookie-session');
 const passport = require("passport");
 const passportLocalMongoose = require("passport-local-mongoose");
 const GoogleStrategy = require('passport-google-oauth20').Strategy;
@@ -39,7 +39,7 @@ app.use(session({ //this session receives object
 app.use(passport.initialize());
 app.use(passport.session());
 //connect mongodb
-mongoose.connect("mongodb+srv://annabelleshq:zzzxshq971001@cluster0.jyonr.mongodb.net/userDB");
+mongoose.connect("mongodb+srv://" + process.env.ATLAS_USER + ":" + process.env.PWD + "@cluster0.jyonr.mongodb.net/userDB");
 // mongoose.set("useCreateIndex", true);
 
 //mongoose Schema
